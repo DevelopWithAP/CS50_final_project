@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %} Manage your account {% endblock %}
+
+{% block main %}
+<div class="container">
+    <p class="alert alert-danger alert-dismissable" role="alert">You are about to make changes to {{ username }}'s account.
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    </p>
+    <p>Manage <a href="/manage_username">Employee Name</a></p>
+    <hr>
+    <p>Manage <a href="/manage_password">Password</a></p>
+</div>
+{% endblock %}

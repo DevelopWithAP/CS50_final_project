@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %} Update username {% endblock %}
+
+{% block main %}
+<form action="/manage_username" method = "POST">
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="new_username" placeholder="New username" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="off" autofocus class="form-control" name="confirm_new_username" placeholder="Re-type here" type="text">
+    </div>
+
+    <button type ="submit" class = "btn btn-primary">Update</button>
+</form>
+{% endblock %}

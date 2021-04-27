@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block title %} Espresso Log {% endblock %}
+
+{% block main %}
+    <h3>Espresso</h3>
+    <hr>
+    <h4>General Information</h4>
+    <form action="/log_espresso" method="POST">
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="name" placeholder="Name" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="batch_number" placeholder="Batch Number" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="roast_date" placeholder="Roast Date" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="recipe" placeholder="Dose - Yield" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="on" autofocus class="form-control" name="time_frame" placeholder="Time Frame" type="text">
+        </div>
+        <div class="form-group">
+            <select name="type" >
+                <option value="">-- Choose type --</option>
+                <option value="house">House Espresso</option>
+                <option value="single_origin">Single Origin</option>
+            </select>
+        </div>
+        <hr>
+        <h4>Sensory Information</h4>
+        <div class="form-group">
+            <select name="acidity" id="acidity">
+                <option value="">-- Acidity --</option>
+                <option value="Low">Low</option>
+                <option value="Low-medium">Low-Medium</option>
+                <option value="Medium">Medium</option>
+                <option value="Medium-High">Medium-High</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="sweetness" id="acidity">
+                <option value="">-- Sweetness --</option>
+                <option value="Low">Low</option>
+                <option value="Low-medium">Low-Medium</option>
+                <option value="Medium">Medium</option>
+                <option value="Medium-High">Medium-High</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <select name="bitterness" id="bitterness">
+                <option value="">-- Bitterness --</option>
+                <option value="Low">Low</option>
+                <option value="Low-medium">Low-Medium</option>
+                <option value="Medium">Medium</option>
+                <option value="Medium-High">Medium-High</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+        <hr>
+        <h5>Tasting notes</h5>
+        <textarea name="tasting_notes" id="tasting_notes" cols="30" rows="5" class="form-control"></textarea>
+        <h5>Body</h5>
+        <textarea name="body" id="body" cols="30" rows="2" class="form-control"></textarea>
+        <hr>
+        <h5>Aftertaste</h5>
+        <textarea name="aftertaste" id="aftertaste" cols="30" rows="2" class="form-control"></textarea>
+        <hr>
+        <h5>Balance</h5>
+        <textarea name="balance" id="balance" cols="30" rows="2" class="form-control"></textarea>
+        <hr>
+        <h5>Notes</h5>
+        <textarea name="notes" id="notes" cols="30" rows="2" class="form-control"></textarea>
+        <hr>
+        </br>
+        <button class="btn btn-primary" type="submit">Log Espresso</button>
+        <hr>
+        <a href="/new_log">Go back</a>
+</form>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %} {{ username }}'s Log {% endblock %}
+
+{% block main %}
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Employee Name</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ username }}</td>
+                <td>{{ position }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

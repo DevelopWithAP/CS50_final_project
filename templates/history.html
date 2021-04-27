@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+
+{% block title %} Log History {% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Espresso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td>{{last_type}}</td>
+      <td>{{second_to_last_type}}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Date/Time</th>
+      <td>{{ last_record }}</td>
+      <td>{{ second_to_last_record }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Recipe</th>
+      <td>{{ last_recipe }}</td>
+      <td>{{second_to_last_recipe}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Details</th>
+      <td>{{ last_notes }}</td>
+      <td>{{ second_to_last_notes }}</td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>3 TEMP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Name</th>
+      <td>{{last_filter }}</td>
+      <td>{{ sec_to_last_filter }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Date/Time</th>
+      <td>{{ last_date }}</td>
+      <td>{{ sec_to_last_date }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Batch</th>
+      <td>{{ last_batch_no }}</td>
+      <td>{{ sec_to_last_batch_no }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Roast Date</th>
+      <td>{{ last_roasted }}</td>
+      <td>{{ sec_to_last_roasted }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Grind Size</th>
+      <td>{{ last_grind_size }}</td>
+      <td>{{ sec_to_grind_size }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Dose</th>
+      <td>{{ last_dose }}</td>
+      <td>{{ sec_to_dose }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Ratio</th>
+      <td>{{ last_ratio }}</td>
+      <td>{{ sec_to_ratio }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>v60</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Name</th>
+      <td>{{ last_v60 }}</td>
+      <td>{{ sec_to_last_v60 }}</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Date/Time</th>
+      <td>{{ last_v60_date }}</td>
+      <td>{{ sec_to_last_v60_date }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Batch Number</th>
+      <td>{{ last_v60_batch_no }}</td>
+      <td>{{ sec_to_last_v60_batch_no }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Roast Date</th>
+      <td>{{ last_v60_roast_date }}</td>
+      <td>{{ sec_to_last_v60_roast_date }}</td>
+    </tr>
+
+    <tr>
+      <th scope="row">Grind Size</th>
+      <td>{{ last_v60_grind_size }}</td>
+      <td>{{ sec_to_last_v60_grind_size }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Ratio</th>
+      <td>{{ last_v60_ratio }}</td>
+      <td>{{ sec_to_last_v60_ratio }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Recipe</th>
+      <td>{{ last_v60_recipe }}</td>
+      <td>{{ sec_to_last_v60_recipe }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Tasting Notes</th>
+      <td>{{ last_v60_notes }}</td>
+      <td>{{ sec_to_last_v60_notes }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}

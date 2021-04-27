@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %} Filter Log {% endblock %}
+
+{% block main %}
+<h3>3TEMP</h3>
+<hr>
+<form action="/log_filter" method="POST">
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="T_name" placeholder="Name" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="T_batch_number" placeholder="Batch Number" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="T_roast_date" placeholder="Roast Date" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="T_grind_size" placeholder="Grind" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="T_dose" placeholder="Dose" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="T_ratio" placeholder="Ratio" type="text">
+    </div>
+    <hr>
+    <h4>Recipe</h4>
+    <hr>
+    <h5>1</h5>
+    <textarea name="step_1" id="1" cols="30" rows="1" class="form-control"></textarea>
+    <h5>2</h5>
+    <textarea name="step_2" id="2" cols="30" rows="1" class="form-control"></textarea>
+    <h5>3</h5>
+    <textarea name="step_3" id="3" cols="30" rows="1" class="form-control"></textarea>
+    <hr>
+    <h5>Tasting notes</h5>
+    <textarea name="T_tasting_notes" id="tasting_notes" cols="30" rows="5" class="form-control"></textarea>
+    <h5>Aroma</h5>
+    <textarea name="T_aroma" id="aroma" cols="30" rows="2" class="form-control"></textarea>
+    <h5>Acidity</h5>
+    <textarea name="T_acidity" id="acidity" cols="30" rows="2" class="form-control"></textarea>
+    <h5>Sweetness</h5>
+    <textarea name="T_sweetness" id="sweetness" cols="30" rows="2" class="form-control"></textarea>
+    <h5>Bitterness</h5>
+    <textarea name="T_bitterness" id="bitterness" cols="30" rows="2" class="form-control"></textarea>
+    <h5>Body</h5>
+    <textarea name="T_body" id="body" cols="30" rows="2" class="form-control"></textarea>
+    </br>
+    <button type="submit" class="btn btn-primary">Log 3TEMP</button>
+    <hr>
+    <a href="/new_log">Go back</a>
+
+</form>
+
+
+{% endblock %}

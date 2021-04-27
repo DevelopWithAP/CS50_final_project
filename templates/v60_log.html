@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %} Log V60 {% endblock %}
+
+{% block main %}
+<form action="/log_v60" method="POST">
+    <h3>V60</h3>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="v60_name" placeholder="Name" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="v60_batch_number" placeholder="Batch No" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="v60_roast_date" placeholder="Roast Date" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="v60_grind_size" placeholder="Grind" type="text">
+    </div>
+    <div class="form-group">
+        <input autocomplete="on" autofocus class="form-control" name="v60_ratio" placeholder="Ratio" type="text">
+    </div>
+    <h6>Recipe</h6>
+    <textarea name="v60_recipe" id="v60_recipe" cols="30" rows="1"></textarea>
+    <h6>Tasting Notes</h6>
+    <textarea name="v60_tasting_notes" id="v60_tasting_notes" cols="30" rows="2"></textarea>
+    </br>
+    <button type="submit" class="btn btn-primary">Log v60</button>
+    <hr>
+    <a href="/new_log">Go back</a>
+</form>
+{% endblock %}
